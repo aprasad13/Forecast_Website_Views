@@ -3,6 +3,8 @@
 
 This project focuses on the problem of forecasting the future values of multiple time series, as it has always been one of the most challenging problems in the field. More specifically, this aim on the problem of forecasting future web traffic for approximately 145,000 Wikipedia articles.
 
+Click to access the code for [Wikipedia Traffic Forecast](https://github.com/aprasad13/Wikipedia_Traffic_Forecast/blob/master/Code_WebView_V3.ipynb)
+
 As this is a forecasting problem. The project shows the performance of following forecasting Models:
 - SARIMA
 - Facebook Prophet
@@ -46,7 +48,7 @@ We plotted a 2-months zoom into the “quiet” parts (i.e. no strong spikes) of
 #### Forecast methods for selected examples
 For this project our forecast period is 2 monts, i.e. about 60 days. In the following, we simulate this period and assess our prediction accuracy by keeping a hold-out sample of the last 60 days from our forecasting data.
 
-We have considered following extreme cases:
+We have considered following extreme cases.Because if our methods manage to deal with our extreme examples then that should be able to deal with any less variable time series as well.:
 
 - Large/Highest Linear Slope (Articles whose views are going up) - (rowname = 70772, 108341)
 - Small/Least Linear Slope (Articles whose views are going down) - (rowname = 95856)
@@ -54,3 +56,16 @@ We have considered following extreme cases:
 - Large Variability in Amplitude (Same as High Standard Deviation, so difficult to predict)
 - High Average Views (Articles which are viewed in large amount) - (rowname = 139120)
 
+For the purpose of forecasting I have used ARIMA and Facebook Prophet. Their performance are as follows:
+
+SARIMA Performance for some extreme cases:
+- 70771 - article views with large linear slope - MAPE = 13.871873287384853%
+- 108340 - article views with large linear slope - MAPE = 11.74985115596561%
+- 95855 - article views with least slope or article which going down - MAPE = 7.458505526315471%
+- 139119 - article with high average views - MAPE = 10.706872597856727%
+
+Prophet Performance for some extreme cases:
+- 70771 - article views with large linear slope - MAPE = 16%
+- 108340 - article views with large linear slope - MAPE = 8%
+- 95855 - article views with least slope or article which going down - MAPE = 14%
+- 139119 - article with high average views - MAPE = 4%

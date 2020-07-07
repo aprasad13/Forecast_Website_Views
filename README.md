@@ -36,11 +36,21 @@ In this section we will have a more global look at the population parameters of 
 Based on the overview parameters (seen in the previous section) we can focus our attention on those articles for which the time series parameters are at the extremes of the parameter space. We found the articles which are extreme in terms of following parameters:
 
 - Large linear slope
-- High standard deviations
-- Large variability amplitudes
+- High standard deviations (Views of these are not possible to predict without any external dataset)
+- Large variability amplitudes (Same as High Standard Deviation, so difficult to predict)
 - High average views
 
+#### Short-term variability
+We plotted a 2-months zoom into the “quiet” parts (i.e. no strong spikes) of different time series to check the seasonality period. Based on the plots there was a clear evidence that there is variability on a weekly scale. To be sure about this we also averaged the variability in the previous plot over the day of the week and then overlay all four time series with different colours on a relative scale. We see the clear trend toward lower viewing numbers on the weekend (Fri/Sat/Sun), and also a declining trend from Monday through Thursday. This gives us valuable information on the general type of variability over the course of a week. 
 
+#### Forecast methods for selected examples
+For this project our forecast period is 2 monts, i.e. about 60 days. In the following, we simulate this period and assess our prediction accuracy by keeping a hold-out sample of the last 60 days from our forecasting data.
 
+We have considered following extreme cases:
 
+- Large/Highest Linear Slope (Articles whose views are going up) - (rowname = 70772, 108341)
+- Small/Least Linear Slope (Articles whose views are going down) - (rowname = 95856)
+- High Standard Deviation (Articles whose views have high fluctuations) - (Views of these are not possible to predict without any external dataset)
+- Large Variability in Amplitude (Same as High Standard Deviation, so difficult to predict)
+- High Average Views (Articles which are viewed in large amount) - (rowname = 139120)
 

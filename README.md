@@ -3,7 +3,12 @@
 
 This project focuses on the problem of forecasting the future values of multiple time series, as it has always been one of the most challenging problems in the field. More specifically, this aim on the problem of forecasting future web traffic for approximately 145,000 Wikipedia articles.
 
-Click to access the code for [Wikipedia Traffic Forecast](https://github.com/aprasad13/Wikipedia_Traffic_Forecast/blob/master/Code_WebView_V3.ipynb)
+Click to access the full code and visualizations for [Wikipedia Traffic Forecast](https://github.com/aprasad13/Wikipedia_Traffic_Forecast/blob/master/Code_WebView_V3.ipynb). 
+
+The notebook contains:
+- Data Preparation
+- EDA
+- Forecasting
 
 As this is a forecasting problem. The project shows the performance of following forecasting Models:
 - SARIMA
